@@ -7634,15 +7634,15 @@
 		)
 		(uuid "1f5f15ed-dac6-473f-9955-a4fd595b4625")
 	)
-	(text "4) L293D Shield"
+	(text "4) DRV8870 Datasheet"
 		(exclude_from_sim no)
-		(at 12.446 182.626 0)
+		(at 12.446 180.086 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
-			(href "http://wiki.sunfounder.cc/index.php?title=L293D_Motor_Driver_Shield")
+			(href "https://www.ti.com/lit/ds/symlink/drv8870.pdf")
 		)
 		(uuid "1f73df34-33c6-4a58-8f07-69034fef406d")
 	)
@@ -7729,7 +7729,7 @@
 	)
 	(text "5) MPU6050 Adafruit"
 		(exclude_from_sim no)
-		(at 12.446 186.436 0)
+		(at 12.446 183.642 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7749,18 +7749,6 @@
 			(justify left bottom)
 		)
 		(uuid "5697a8c9-8e5f-4f9c-8bf3-05d0f0928e7b")
-	)
-	(text "4) L293x Ti"
-		(exclude_from_sim no)
-		(at 12.446 173.736 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-			(href "https://www.ti.com/lit/ds/symlink/l293.pdf")
-		)
-		(uuid "74853a07-171c-4c99-8c31-4cfe0c6a8515")
 	)
 	(text "*C) Puede que no sea necesario el switch mejor\nquitar para reducir componentes"
 		(exclude_from_sim no)
@@ -7939,7 +7927,7 @@
 	)
 	(text "6) Video de Phil 30:50"
 		(exclude_from_sim no)
-		(at 12.446 190.246 0)
+		(at 12.446 187.452 0)
 		(effects
 			(font
 				(size 1.27 1.27)
