@@ -7716,9 +7716,9 @@
 		)
 		(uuid "497d2c8e-afd2-4a4b-8cd8-210d44086912")
 	)
-	(text "6) Conector p/\nencoder\n"
+	(text "7) Encoder"
 		(exclude_from_sim no)
-		(at 245.11 123.19 0)
+		(at 244.602 118.872 0)
 		(effects
 			(font
 				(size 2.54 2.54)
@@ -7739,9 +7739,9 @@
 		)
 		(uuid "53111c18-89ef-42bf-8743-5bea425e99ef")
 	)
-	(text "3) Regulación 5V a 3.3V"
+	(text "3) Regulación"
 		(exclude_from_sim no)
-		(at 207.772 19.304 0)
+		(at 207.518 18.542 0)
 		(effects
 			(font
 				(size 2.54 2.54)
@@ -7835,7 +7835,7 @@
 		)
 		(uuid "a82a73cd-8e7b-401a-b59f-8b4d7f30e74c")
 	)
-	(text "4) Puente H (DRV8870DDA)"
+	(text "4) Motores"
 		(exclude_from_sim no)
 		(at 115.062 106.426 0)
 		(effects
@@ -7903,9 +7903,9 @@
 		)
 		(uuid "be1e5b3e-9fa4-4157-90c3-99973c0ad07f")
 	)
-	(text "2) Conv. Boost 3.7 LIPO a 12V\n(LMR62014)"
+	(text "2) Conv. Boost 3.7 ~ 5V & 12V"
 		(exclude_from_sim no)
-		(at 115.062 22.86 0)
+		(at 115.062 19.05 0)
 		(effects
 			(font
 				(size 2.54 2.54)
@@ -7914,7 +7914,7 @@
 		)
 		(uuid "cd94ea6a-0108-493e-b953-d87e7301f848")
 	)
-	(text "5) IMU (MPU6050)"
+	(text "5) IMU"
 		(exclude_from_sim no)
 		(at 207.772 56.896 0)
 		(effects
