@@ -64,8 +64,8 @@ all: main-build
 main-build: RobotBalanceador.elf secondary-outputs
 
 # Tool invocations
-RobotBalanceador.elf RobotBalanceador.map: $(OBJS) $(USER_OBJS) D:\Archivos\STM32\Projects\RobotBalanceador\STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "RobotBalanceador.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\Archivos\STM32\Projects\RobotBalanceador\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RobotBalanceador.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+RobotBalanceador.elf RobotBalanceador.map: $(OBJS) $(USER_OBJS) D:\Archivos\Proyectos\RobotBalanceador\Source\RobotBalanceador\STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "RobotBalanceador.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\Archivos\Proyectos\RobotBalanceador\Source\RobotBalanceador\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RobotBalanceador.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
