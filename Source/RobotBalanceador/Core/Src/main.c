@@ -42,6 +42,13 @@
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
 
+typedef struct {
+ float kp;
+ float ki;
+ float kd;
+ // Lo que sea necesario
+} PID_t;
+
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -72,7 +79,7 @@ void SystemClock_Config(void);
 
 void AplicarPWM(float valor);
 void AplicarPWM2(float valor);
-
+float AccionPID(PID_t *pid, float setpoint, float nueva_lectura);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -252,6 +259,18 @@ void AplicarPWM2(float valor) {
     __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_4, entero);
   }
 }
+
+float AccionPID(PID_t *pid, float setpoint, float nueva_lectura) {
+  // Código ...
+
+
+
+
+
+  //return accion;
+  return 0.0;
+}
+
 
 /* USER CODE END 4 */
 
