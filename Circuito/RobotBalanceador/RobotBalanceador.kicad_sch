@@ -5207,8 +5207,24 @@
 		(uuid "92324575-f8da-47cf-abc4-ccb3a333aecd")
 	)
 	(no_connect
+		(at 66.04 97.79)
+		(uuid "9be1d747-29f8-433f-9a85-c99b737383aa")
+	)
+	(no_connect
+		(at 66.04 74.93)
+		(uuid "d41e7f1d-3228-46f5-a7cc-7520012d2c6c")
+	)
+	(no_connect
 		(at 219.71 140.97)
 		(uuid "e4394305-d670-4f22-b40f-383b5ad74944")
+	)
+	(no_connect
+		(at 66.04 72.39)
+		(uuid "f5073623-169c-43a6-89e4-3adbb3f9f918")
+	)
+	(no_connect
+		(at 66.04 77.47)
+		(uuid "f5980498-6125-4ad7-b718-500f7cbcd63a")
 	)
 	(no_connect
 		(at 264.16 87.63)
@@ -5533,6 +5549,16 @@
 			(type default)
 		)
 		(uuid "2002dd6e-ad21-4d61-a2dd-666fa23727ff")
+	)
+	(wire
+		(pts
+			(xy 99.06 52.07) (xy 106.68 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "20107648-d959-48cb-afa5-86ef7b1aa084")
 	)
 	(wire
 		(pts
@@ -6076,6 +6102,16 @@
 	)
 	(wire
 		(pts
+			(xy 99.06 46.99) (xy 106.68 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4df7f80e-f73a-4d57-b9a1-59128c3e72e8")
+	)
+	(wire
+		(pts
 			(xy 78.74 39.37) (xy 78.74 38.1)
 		)
 		(stroke
@@ -6216,7 +6252,7 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 125.73) (xy 134.62 125.73)
+			(xy 128.27 125.73) (xy 134.62 125.73)
 		)
 		(stroke
 			(width 0)
@@ -6536,7 +6572,7 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 123.19) (xy 134.62 123.19)
+			(xy 128.27 123.19) (xy 134.62 123.19)
 		)
 		(stroke
 			(width 0)
@@ -6546,7 +6582,7 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 160.02) (xy 134.62 160.02)
+			(xy 128.27 160.02) (xy 134.62 160.02)
 		)
 		(stroke
 			(width 0)
@@ -6696,6 +6732,16 @@
 	)
 	(wire
 		(pts
+			(xy 99.06 44.45) (xy 106.68 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "869a9140-31dd-49f2-9120-73a1f0add65a")
+	)
+	(wire
+		(pts
 			(xy 143.51 72.39) (xy 143.51 73.66)
 		)
 		(stroke
@@ -6836,7 +6882,7 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 162.56) (xy 134.62 162.56)
+			(xy 128.27 162.56) (xy 134.62 162.56)
 		)
 		(stroke
 			(width 0)
@@ -7413,6 +7459,16 @@
 			(type default)
 		)
 		(uuid "def6633f-412c-4b7d-9f7b-e9ea5ddf5a0b")
+	)
+	(wire
+		(pts
+			(xy 99.06 49.53) (xy 106.68 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "deffa0c5-da57-4049-8c05-2fe320cb3e3b")
 	)
 	(wire
 		(pts
@@ -8107,8 +8163,8 @@
 		)
 		(uuid "f1aec492-a5e2-4532-8109-e29c921cecdf")
 	)
-	(label "MOT2_IN1"
-		(at 124.46 160.02 0)
+	(label "PWM3"
+		(at 128.27 160.02 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8184,8 +8240,8 @@
 		)
 		(uuid "313481a2-cf64-447d-9f1e-784e457e19c8")
 	)
-	(label "MOT1_IN2"
-		(at 124.46 125.73 0)
+	(label "PWM2"
+		(at 128.27 125.73 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8239,8 +8295,8 @@
 		)
 		(uuid "5d9d6e4a-300c-44cc-8db0-96ee3adc11a2")
 	)
-	(label "MOT1_IN1"
-		(at 124.46 123.19 0)
+	(label "PWM1"
+		(at 128.27 123.19 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8305,8 +8361,19 @@
 		)
 		(uuid "8e0caa4b-e133-4a11-9ec7-29d4d9a8b9d6")
 	)
-	(label "MOT2_IN2"
-		(at 124.46 162.56 0)
+	(label "PWM4"
+		(at 106.68 52.07 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "9418a4be-90cb-4d17-8056-2108508f734c")
+	)
+	(label "PWM4"
+		(at 128.27 162.56 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8326,6 +8393,17 @@
 			(justify left bottom)
 		)
 		(uuid "995b9799-23d5-4b87-b142-94a853661ab0")
+	)
+	(label "PWM3"
+		(at 106.68 49.53 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "a2f672f6-ead2-4405-852f-d870376e6b9a")
 	)
 	(label "I2C_SCL"
 		(at 219.71 82.55 0)
@@ -8359,6 +8437,17 @@
 			(justify left bottom)
 		)
 		(uuid "c0bb2994-c618-4c66-bc4c-ea48b87095d2")
+	)
+	(label "PWM2"
+		(at 106.68 46.99 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "c4fec2e1-4bde-4b9a-86d1-e6826a1b351f")
 	)
 	(label "HSE_IN"
 		(at 38.1 72.39 180)
@@ -8403,6 +8492,17 @@
 			(justify left bottom)
 		)
 		(uuid "e8fef3e7-7a2b-4d7d-94ab-5832ec99b391")
+	)
+	(label "PWM1"
+		(at 106.68 44.45 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "f582218d-8abc-452a-bf3f-001b07afd897")
 	)
 	(symbol
 		(lib_id "Device:R_Small")
