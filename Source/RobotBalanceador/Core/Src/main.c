@@ -63,6 +63,9 @@ uint32_t last_mpu_time = 0;
 
 MPU6050_t MPU6050;
 
+    //Varaible PWM
+    uint16_t *duty_ch1;
+    uint16_t *duty_ch2;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -74,6 +77,39 @@ void SystemClock_Config(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+      //############################Funciones######################################//
+
+  void Direccion_PWM(char Direccion, uint16_t Duty){
+
+      //Duty va de 0 a 65535
+      //U = Adelante  up
+      //D = Atras		Down
+
+      //Asignacion de ciclo de trabajo
+      duty_ch1=Duty;
+      __HAL_TIM_SetCompare(&htim1, TIM_CHANNEL_1,duty_ch1);
+      duty_ch2=Duty;
+      __HAL_TIM_SetCompare(&htim1, TIM_CHANNEL_2,duty_ch2);
+
+      if(Direccion=='U'){
+
+        //Motor Derecho
+        HAL_GPIO_WritePin(IN1_GPIO_Port, IN1_Pin, 1); //Giro Horario
+        HAL_GPIO_WritePin(IN2_GPIO_Port, IN2_Pin, 0); //Grio Antihorario
+        //Motor Izquierdo
+        HAL_GPIO_WritePin(IN3_GPIO_Port, IN3_Pin, 1); //Giro Horario
+        HAL_GPIO_WritePin(IN4_GPIO_Port, IN4_Pin, 0); //Grio Antihorario
+      }
+      else if (Direccion == 'D'){
+        //Motor Derecho
+        HAL_GPIO_WritePin(IN1_GPIO_Port, IN1_Pin, 0); //Giro Horario
+        HAL_GPIO_WritePin(IN2_GPIO_Port, IN2_Pin, 1); //Grio Antihorario
+        //Motor Izquierdo
+        HAL_GPIO_WritePin(IN3_GPIO_Port, IN3_Pin, 0); //Giro Horario
+        HAL_GPIO_WritePin(IN4_GPIO_Port, IN4_Pin, 1); //Grio Antihorario
+      }
+  }
+  //#####################################################################################
 /* USER CODE END 0 */
 
 /**
@@ -111,7 +147,18 @@ int main(void) {
   // Inicializar variables
   last_mpu_time = HAL_GetTick();
 
-
+  
+  /*####################### Se inicializa el PWM ############################*/
+  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
+  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
+	//Se asigna el valor para el pwm
+	//Canal 1
+	duty_ch1=0;
+	__HAL_TIM_SetCompare(&htim1, TIM_CHANNEL_1,duty_ch1);
+	//Canal 2
+	duty_ch2=0;
+	__HAL_TIM_SetCompare(&htim1, TIM_CHANNEL_2,duty_ch2);
+  /*#########################################################################*/
 
   // Esperar para la inicialización del MPU6050
   while (MPU6050_Init(&hi2c1) == 1);
