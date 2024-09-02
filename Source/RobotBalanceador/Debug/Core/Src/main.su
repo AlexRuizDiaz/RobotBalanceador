@@ -1,6 +1,7 @@
-../Core/Src/main.c:94:5:main	8	static
-../Core/Src/main.c:159:6:SystemClock_Config	88	static
-../Core/Src/main.c:204:6:AplicarPWM	24	static
-../Core/Src/main.c:233:6:AplicarPWM2	24	static
-../Core/Src/main.c:263:7:AccionPID	24	static
-../Core/Src/main.c:281:6:Error_Handler	4	static,ignoring_inline_asm
+../Core/Src/main.c:98:5:main	16	static
+../Core/Src/main.c:181:6:SystemClock_Config	88	static
+../Core/Src/main.c:226:6:AplicarPWM	24	static
+../Core/Src/main.c:255:6:AplicarPWM2	24	static
+../Core/Src/main.c:286:7:AccionPID	24	static
+../Core/Src/main.c:298:6:EnviarPC	56	static
+../Core/Src/main.c:311:6:Error_Handler	4	static,ignoring_inline_asm

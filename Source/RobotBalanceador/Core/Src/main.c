@@ -34,7 +34,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
-#include "usbd_cdc.h"
+#include "string.h"
+#include "usbd_cdc_if.h"
 #include "mpu6050.h"
 
 /* USER CODE END Includes */
@@ -70,6 +71,7 @@ typedef struct {
 
 uint32_t last_mpu_time = 0;
 MPU6050_t MPU6050;
+PID_t pid;
 
 /* USER CODE END PV */
 
@@ -80,6 +82,8 @@ void SystemClock_Config(void);
 void AplicarPWM(float valor);
 void AplicarPWM2(float valor);
 float AccionPID(PID_t *pid, float setpoint, float nueva_lectura);
+void EnviarPC(float angulo);
+
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -116,23 +120,34 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_USB_DEVICE_Init();
-  MX_I2C1_Init();
   MX_TIM4_Init();
-  MX_TIM2_Init();
+  MX_TIM3_Init();
+  MX_I2C2_Init();
   /* USER CODE BEGIN 2 */
 
   // Inicializar variables
   last_mpu_time = HAL_GetTick();
 
+
+
+
   // Inicialización del PWM
-  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
-  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
-  __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_1, 0);
-  __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 0);
-  // __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_3, 0); El DRV8870 utiliza 4 pines de PWM
-  // __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_4, 0);
+  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
+  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
+  //HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3);  El DRV8870 utiliza 4 pines de PWM
+  //HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_4);
+  __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_1, 0);
+  __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_2, 0);
+  // __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_3, 0);
+  // __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_4, 0);
+
+
+  // Inicialización de timer para Encoder
+  HAL_TIM_Encoder_Start(&htim4, TIM_CHANNEL_ALL);
+
+
   // Esperar para la inicialización del MPU6050
-  while (MPU6050_Init(&hi2c1) == 1);
+  while (MPU6050_Init(&hi2c2) == 1);
 
   /* USER CODE END 2 */
 
@@ -142,8 +157,15 @@ int main(void)
 
     // Lectura del MPU6050 cada 100ms
     if (HAL_GetTick() - last_mpu_time > 100) {
-      MPU6050_Read_All(&hi2c1, &MPU6050);
+      MPU6050_Read_All(&hi2c2, &MPU6050);
+
+      float angulo = MPU6050.KalmanAngleY;
+      float accion = AccionPID(&pid, 0, angulo);
+      AplicarPWM(accion);
+      EnviarPC(angulo);
     }
+
+
 
     /* USER CODE END WHILE */
 
@@ -200,7 +222,7 @@ void SystemClock_Config(void)
 
 /* USER CODE BEGIN 4 */
 
-// Aplicar PWM a los motores
+// Aplicar PWM a los motores, si el valor es negativo va en el otro sentido
 void AplicarPWM(float valor) {
   // Duty va de 0 a 1000
 
@@ -209,8 +231,8 @@ void AplicarPWM(float valor) {
 
   // Limitar de 0 a 1000
   entero = (entero > 1000)? 1000 : entero;
-  __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_1, entero);
-  __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, entero);
+  __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_1, entero);
+  __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_2, entero);
 
   if (valor >= 0.0) {
     //Motor Derecho
@@ -242,24 +264,25 @@ void AplicarPWM2(float valor) {
 
   if (valor >= 0.0) {
     // Motor Derecho
-    __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_1, entero);
-    __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 0);
+    __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_1, entero);
+    __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_2, 0);
 
     // Motor Izquierdo
-    __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_3, entero);
-    __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_4, 0);
+    __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_3, entero);
+    __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_4, 0);
 
   } else {
     // Motor Derecho
-    __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_1, 0);
-    __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, entero);
+    __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_1, 0);
+    __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_2, entero);
 
     // Motor Izquierdo
-    __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_3, 0);
-    __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_4, entero);
+    __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_3, 0);
+    __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_4, entero);
   }
 }
 
+// Cálculo de la acción del PID
 float AccionPID(PID_t *pid, float setpoint, float nueva_lectura) {
   // Código ...
 
@@ -269,6 +292,13 @@ float AccionPID(PID_t *pid, float setpoint, float nueva_lectura) {
 
   //return accion;
   return 0.0;
+}
+
+// Enviar a PC para visualizar en Serial Oscilloscope
+void EnviarPC(float angulo) {
+  char msg[30];
+  snprintf(msg, 30, "angulo=%f\r\n", angulo);
+  CDC_Transmit_FS((uint8_t *)msg, strlen(msg));
 }
 
 

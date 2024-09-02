@@ -2042,6 +2042,151 @@
 				)
 			)
 		)
+		(symbol "Diode:SS22"
+			(pin_numbers hide)
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SS22"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Diode_SMD:D_SMA"
+				(at 0 -4.445 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.vishay.com/docs/88748/ss22.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "20V 2A Schottky Diode, SMA"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "diode Schottky"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "D*SMA*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "SS22_0_1"
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.905 0.635) (xy -1.905 1.27) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -0.635 -1.27) (xy -0.635 -0.635)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SS22_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Driver_Motor:DRV8870DDA"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -4955,12 +5100,6 @@
 		(uuid "1e88bf3b-e68a-467d-9710-9c5b3db35232")
 	)
 	(junction
-		(at 48.26 83.82)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "29013e23-79f7-421a-b769-b82038bf4f53")
-	)
-	(junction
 		(at 82.55 119.38)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5081,13 +5220,19 @@
 		(uuid "8b68fa2f-f330-4f85-8a62-a4408797f9a3")
 	)
 	(junction
+		(at 48.26 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9257ea2d-032f-4908-8b89-9617f8a10993")
+	)
+	(junction
 		(at 71.12 25.4)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9c6184ab-484f-4c8e-acce-9258fda2913e")
 	)
 	(junction
-		(at 227.33 95.25)
+		(at 219.71 95.25)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9ceb99a5-bf14-414f-9a0a-11ddb06cd5bd")
@@ -5189,42 +5334,118 @@
 		(uuid "f7c7cf87-c015-4b5e-8e21-684cd2c1b0ff")
 	)
 	(junction
-		(at 227.33 92.71)
+		(at 219.71 92.71)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fad4e46c-78e0-40a0-8d8c-bd031c693c17")
+	)
+	(no_connect
+		(at 99.06 49.53)
+		(uuid "176acbfe-99f1-4ea2-86a1-06860616dc5c")
+	)
+	(no_connect
+		(at 99.06 67.31)
+		(uuid "199a3a8c-f2a4-4d11-951e-b2f78452a0f5")
+	)
+	(no_connect
+		(at 99.06 54.61)
+		(uuid "2ed3de4f-d647-4b5e-8721-8afdd4285bfa")
+	)
+	(no_connect
+		(at 66.04 64.77)
+		(uuid "40bebbcc-a363-43a7-89f1-b88cf7eaa6bb")
+	)
+	(no_connect
+		(at 66.04 62.23)
+		(uuid "57ba7af8-4aa3-4bd6-923f-9bc84d028fbb")
 	)
 	(no_connect
 		(at 229.87 146.05)
 		(uuid "5becf12f-794e-48c1-b5a6-84dbe5af3efa")
 	)
 	(no_connect
+		(at 66.04 85.09)
+		(uuid "601e224d-e396-4843-b546-fb0d489d362d")
+	)
+	(no_connect
+		(at 99.06 69.85)
+		(uuid "6072da13-d57c-4733-9aa1-ffb7723a9f31")
+	)
+	(no_connect
+		(at 66.04 80.01)
+		(uuid "77b0f62d-16d3-467d-9333-30278290255f")
+	)
+	(no_connect
+		(at 99.06 46.99)
+		(uuid "7c2bec50-005a-4b1f-88ea-d9aa74fa7c7c")
+	)
+	(no_connect
+		(at 66.04 95.25)
+		(uuid "7ce3cce6-1e9d-4b29-813c-4479b134871a")
+	)
+	(no_connect
 		(at 264.16 85.09)
 		(uuid "88cc934a-3919-439e-a772-925be44c15a9")
+	)
+	(no_connect
+		(at 66.04 92.71)
+		(uuid "8f498b07-a9f5-4813-89cf-c7d049592f3c")
+	)
+	(no_connect
+		(at 99.06 57.15)
+		(uuid "8f6c5173-adad-4375-af80-477c5ede138a")
 	)
 	(no_connect
 		(at 264.16 80.01)
 		(uuid "92324575-f8da-47cf-abc4-ccb3a333aecd")
 	)
 	(no_connect
-		(at 66.04 97.79)
-		(uuid "9be1d747-29f8-433f-9a85-c99b737383aa")
+		(at 99.06 44.45)
+		(uuid "9ca47bfc-9e02-48fa-baf2-5d23ba245c2a")
 	)
 	(no_connect
-		(at 66.04 74.93)
-		(uuid "d41e7f1d-3228-46f5-a7cc-7520012d2c6c")
+		(at 66.04 102.87)
+		(uuid "9f7ad857-3dfb-4207-ae94-7f33facf7991")
+	)
+	(no_connect
+		(at 66.04 110.49)
+		(uuid "a41a9263-fd80-4d21-bb89-f83658d51231")
+	)
+	(no_connect
+		(at 66.04 107.95)
+		(uuid "a7198fe5-26f2-422d-963c-25ebcbcc2ff9")
+	)
+	(no_connect
+		(at 99.06 64.77)
+		(uuid "aa9c7a86-086b-41fe-8267-8ac9c3499240")
+	)
+	(no_connect
+		(at 66.04 82.55)
+		(uuid "b89d60fc-6ee4-4df9-a0e0-038c19f450b8")
+	)
+	(no_connect
+		(at 66.04 67.31)
+		(uuid "baa33d71-8c7c-4cb5-b122-c76c525282e0")
+	)
+	(no_connect
+		(at 99.06 52.07)
+		(uuid "dd85be4a-2ab7-42c9-9750-0503eea02cb4")
 	)
 	(no_connect
 		(at 219.71 140.97)
 		(uuid "e4394305-d670-4f22-b40f-383b5ad74944")
 	)
 	(no_connect
-		(at 66.04 72.39)
-		(uuid "f5073623-169c-43a6-89e4-3adbb3f9f918")
+		(at 99.06 82.55)
+		(uuid "e6a30d70-faf7-4f7c-8fdb-6f57e8440b7f")
 	)
 	(no_connect
 		(at 66.04 77.47)
 		(uuid "f5980498-6125-4ad7-b718-500f7cbcd63a")
+	)
+	(no_connect
+		(at 66.04 105.41)
+		(uuid "f6aaa3d2-a5fb-44c7-b937-73a8dcbe798d")
 	)
 	(no_connect
 		(at 264.16 87.63)
@@ -5249,6 +5470,16 @@
 			(type default)
 		)
 		(uuid "00deeb2a-9341-45ab-a818-a4cf4c8b5a50")
+	)
+	(wire
+		(pts
+			(xy 49.53 88.9) (xy 49.53 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "010a9b6b-4f05-4dba-8d9c-a87e3b5945f6")
 	)
 	(wire
 		(pts
@@ -5422,6 +5653,16 @@
 	)
 	(wire
 		(pts
+			(xy 58.42 72.39) (xy 66.04 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1457e252-5929-44d2-b563-c8c7c53f5d25")
+	)
+	(wire
+		(pts
 			(xy 62.23 25.4) (xy 71.12 25.4)
 		)
 		(stroke
@@ -5492,16 +5733,6 @@
 	)
 	(wire
 		(pts
-			(xy 46.99 83.82) (xy 48.26 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1a20ae8d-91fd-4046-9b03-1fdd11b41dd6")
-	)
-	(wire
-		(pts
 			(xy 124.46 153.67) (xy 124.46 154.94)
 		)
 		(stroke
@@ -5549,16 +5780,6 @@
 			(type default)
 		)
 		(uuid "2002dd6e-ad21-4d61-a2dd-666fa23727ff")
-	)
-	(wire
-		(pts
-			(xy 99.06 52.07) (xy 106.68 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "20107648-d959-48cb-afa5-86ef7b1aa084")
 	)
 	(wire
 		(pts
@@ -5872,7 +6093,7 @@
 	)
 	(wire
 		(pts
-			(xy 227.33 95.25) (xy 227.33 92.71)
+			(xy 219.71 95.25) (xy 219.71 92.71)
 		)
 		(stroke
 			(width 0)
@@ -5942,16 +6163,6 @@
 	)
 	(wire
 		(pts
-			(xy 49.53 83.82) (xy 49.53 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3f2f3e8c-f8de-485d-ae2c-22e17d33f6ba")
-	)
-	(wire
-		(pts
 			(xy 167.64 26.67) (xy 177.8 26.67)
 		)
 		(stroke
@@ -6012,16 +6223,6 @@
 	)
 	(wire
 		(pts
-			(xy 49.53 95.25) (xy 49.53 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "42a3d627-351a-491f-a6e2-aa45093bf407")
-	)
-	(wire
-		(pts
 			(xy 29.21 109.22) (xy 30.48 109.22)
 		)
 		(stroke
@@ -6039,6 +6240,16 @@
 			(type default)
 		)
 		(uuid "4474f830-7d06-4b29-b5df-7a939ddc5d5a")
+	)
+	(wire
+		(pts
+			(xy 49.53 97.79) (xy 66.04 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4677b1a0-a43a-4cda-880c-3280d36cc721")
 	)
 	(wire
 		(pts
@@ -6089,26 +6300,6 @@
 			(type default)
 		)
 		(uuid "4cf2c71e-46aa-4613-9c6f-530194818d05")
-	)
-	(wire
-		(pts
-			(xy 46.99 85.09) (xy 46.99 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4d229547-945c-41de-be97-f6f9bec30c41")
-	)
-	(wire
-		(pts
-			(xy 99.06 46.99) (xy 106.68 46.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4df7f80e-f73a-4d57-b9a1-59128c3e72e8")
 	)
 	(wire
 		(pts
@@ -6202,7 +6393,7 @@
 	)
 	(wire
 		(pts
-			(xy 227.33 91.44) (xy 227.33 92.71)
+			(xy 219.71 91.44) (xy 219.71 92.71)
 		)
 		(stroke
 			(width 0)
@@ -6229,16 +6420,6 @@
 			(type default)
 		)
 		(uuid "57a67d39-1c3c-4326-a751-03a96d8cefa2")
-	)
-	(wire
-		(pts
-			(xy 48.26 83.82) (xy 49.53 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5a176842-4a70-47d7-9be5-342f9ded61d5")
 	)
 	(wire
 		(pts
@@ -6272,7 +6453,7 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 123.19) (xy 156.21 123.19)
+			(xy 154.94 123.19) (xy 160.02 123.19)
 		)
 		(stroke
 			(width 0)
@@ -6372,6 +6553,16 @@
 	)
 	(wire
 		(pts
+			(xy 46.99 90.17) (xy 46.99 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6855ee3c-b7f7-48b8-85d6-7aabd17fb885")
+	)
+	(wire
+		(pts
 			(xy 38.1 57.15) (xy 38.1 58.42)
 		)
 		(stroke
@@ -6462,7 +6653,7 @@
 	)
 	(wire
 		(pts
-			(xy 228.6 95.25) (xy 227.33 95.25)
+			(xy 219.71 95.25) (xy 228.6 95.25)
 		)
 		(stroke
 			(width 0)
@@ -6492,6 +6683,16 @@
 	)
 	(wire
 		(pts
+			(xy 99.06 62.23) (xy 106.68 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "71116fe0-651c-4144-8817-7c1d5286b9d6")
+	)
+	(wire
+		(pts
 			(xy 165.1 41.91) (xy 165.1 43.18)
 		)
 		(stroke
@@ -6509,6 +6710,16 @@
 			(type default)
 		)
 		(uuid "73a75446-a929-4f4d-82f9-bc64fa19fd66")
+	)
+	(wire
+		(pts
+			(xy 48.26 87.63) (xy 48.26 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "74a2074f-6897-4851-a4da-ea622dfc9bb6")
 	)
 	(wire
 		(pts
@@ -6552,7 +6763,7 @@
 	)
 	(wire
 		(pts
-			(xy 161.29 167.64) (xy 163.83 167.64)
+			(xy 168.91 167.64) (xy 171.45 167.64)
 		)
 		(stroke
 			(width 0)
@@ -6612,7 +6823,7 @@
 	)
 	(wire
 		(pts
-			(xy 227.33 95.25) (xy 227.33 96.52)
+			(xy 219.71 95.25) (xy 219.71 96.52)
 		)
 		(stroke
 			(width 0)
@@ -6662,16 +6873,6 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 82.55) (xy 48.26 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "83061ae3-4486-4308-bfcf-32b6d2e1a888")
-	)
-	(wire
-		(pts
 			(xy 194.31 41.91) (xy 194.31 43.18)
 		)
 		(stroke
@@ -6712,7 +6913,7 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 125.73) (xy 156.21 125.73)
+			(xy 154.94 125.73) (xy 160.02 125.73)
 		)
 		(stroke
 			(width 0)
@@ -6732,16 +6933,6 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 44.45) (xy 106.68 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "869a9140-31dd-49f2-9120-73a1f0add65a")
-	)
-	(wire
-		(pts
 			(xy 143.51 72.39) (xy 143.51 73.66)
 		)
 		(stroke
@@ -6752,7 +6943,7 @@
 	)
 	(wire
 		(pts
-			(xy 163.83 130.81) (xy 163.83 133.35)
+			(xy 171.45 130.81) (xy 171.45 133.35)
 		)
 		(stroke
 			(width 0)
@@ -6762,7 +6953,17 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 160.02) (xy 156.21 160.02)
+			(xy 48.26 88.9) (xy 49.53 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "887602ea-7d9b-4322-b644-dc150aeaaf71")
+	)
+	(wire
+		(pts
+			(xy 154.94 160.02) (xy 160.02 160.02)
 		)
 		(stroke
 			(width 0)
@@ -6992,7 +7193,17 @@
 	)
 	(wire
 		(pts
-			(xy 161.29 130.81) (xy 163.83 130.81)
+			(xy 172.72 36.83) (xy 177.8 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab3d004d-159c-448f-88c5-dfb32829f8e5")
+	)
+	(wire
+		(pts
+			(xy 168.91 130.81) (xy 171.45 130.81)
 		)
 		(stroke
 			(width 0)
@@ -7002,7 +7213,7 @@
 	)
 	(wire
 		(pts
-			(xy 163.83 167.64) (xy 163.83 170.18)
+			(xy 171.45 167.64) (xy 171.45 170.18)
 		)
 		(stroke
 			(width 0)
@@ -7059,16 +7270,6 @@
 			(type default)
 		)
 		(uuid "b51e6531-4726-4b2c-90b1-8c8599b6ab46")
-	)
-	(wire
-		(pts
-			(xy 46.99 92.71) (xy 66.04 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b78cd5f9-abcf-417a-8234-63853581b709")
 	)
 	(wire
 		(pts
@@ -7142,7 +7343,17 @@
 	)
 	(wire
 		(pts
-			(xy 228.6 85.09) (xy 227.33 85.09)
+			(xy 46.99 100.33) (xy 46.99 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bd98d9c2-d85b-4122-b43b-b44330a74785")
+	)
+	(wire
+		(pts
+			(xy 219.71 85.09) (xy 228.6 85.09)
 		)
 		(stroke
 			(width 0)
@@ -7222,6 +7433,16 @@
 	)
 	(wire
 		(pts
+			(xy 46.99 88.9) (xy 48.26 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3bc5013-c58e-40d0-84b0-829293d1160c")
+	)
+	(wire
+		(pts
 			(xy 187.96 34.29) (xy 194.31 34.29)
 		)
 		(stroke
@@ -7229,16 +7450,6 @@
 			(type default)
 		)
 		(uuid "c3d421c3-5b2d-4620-8965-c263c96d00b0")
-	)
-	(wire
-		(pts
-			(xy 46.99 92.71) (xy 46.99 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c5454db1-0755-40a1-8c4f-c20fbd0585bc")
 	)
 	(wire
 		(pts
@@ -7259,6 +7470,16 @@
 			(type default)
 		)
 		(uuid "c5b79e65-5ec8-4a7e-9e8c-b4a9ee174a83")
+	)
+	(wire
+		(pts
+			(xy 58.42 74.93) (xy 66.04 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c5dc368c-0ae3-4ff7-8c14-dd28a128b544")
 	)
 	(wire
 		(pts
@@ -7372,7 +7593,7 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 130.81) (xy 156.21 130.81)
+			(xy 154.94 130.81) (xy 163.83 130.81)
 		)
 		(stroke
 			(width 0)
@@ -7432,7 +7653,7 @@
 	)
 	(wire
 		(pts
-			(xy 227.33 85.09) (xy 227.33 86.36)
+			(xy 219.71 85.09) (xy 219.71 86.36)
 		)
 		(stroke
 			(width 0)
@@ -7459,16 +7680,6 @@
 			(type default)
 		)
 		(uuid "def6633f-412c-4b7d-9f7b-e9ea5ddf5a0b")
-	)
-	(wire
-		(pts
-			(xy 99.06 49.53) (xy 106.68 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "deffa0c5-da57-4049-8c05-2fe320cb3e3b")
 	)
 	(wire
 		(pts
@@ -7522,7 +7733,7 @@
 	)
 	(wire
 		(pts
-			(xy 227.33 92.71) (xy 228.6 92.71)
+			(xy 219.71 92.71) (xy 228.6 92.71)
 		)
 		(stroke
 			(width 0)
@@ -7532,7 +7743,7 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 162.56) (xy 156.21 162.56)
+			(xy 154.94 162.56) (xy 160.02 162.56)
 		)
 		(stroke
 			(width 0)
@@ -7562,16 +7773,6 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 36.83) (xy 172.72 36.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "eaa505a9-0a10-4d22-a673-65a2a2b7bb48")
-	)
-	(wire
-		(pts
 			(xy 167.64 60.96) (xy 177.8 60.96)
 		)
 		(stroke
@@ -7592,7 +7793,7 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 167.64) (xy 156.21 167.64)
+			(xy 154.94 167.64) (xy 163.83 167.64)
 		)
 		(stroke
 			(width 0)
@@ -7609,16 +7810,6 @@
 			(type default)
 		)
 		(uuid "ee821aa5-c53b-4460-9b8c-b68ed3d04667")
-	)
-	(wire
-		(pts
-			(xy 49.53 95.25) (xy 66.04 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ee92b3e5-1238-4331-bc4c-cc005cbe6403")
 	)
 	(wire
 		(pts
@@ -7692,6 +7883,16 @@
 	)
 	(wire
 		(pts
+			(xy 46.99 100.33) (xy 66.04 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f718a845-37ee-44d4-bc6d-3b66ea7ec833")
+	)
+	(wire
+		(pts
 			(xy 152.4 26.67) (xy 162.56 26.67)
 		)
 		(stroke
@@ -7712,6 +7913,16 @@
 	)
 	(wire
 		(pts
+			(xy 99.06 59.69) (xy 106.68 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f962768c-2b1e-4d79-a6b1-b9bacb878d86")
+	)
+	(wire
+		(pts
 			(xy 137.16 54.61) (xy 137.16 55.88)
 		)
 		(stroke
@@ -7719,6 +7930,16 @@
 			(type default)
 		)
 		(uuid "fa4c2edd-b256-4796-befb-65861ced1087")
+	)
+	(wire
+		(pts
+			(xy 49.53 97.79) (xy 49.53 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fd8469a7-c4f7-4193-8a5f-fd9a317478ad")
 	)
 	(wire
 		(pts
@@ -8163,6 +8384,17 @@
 		)
 		(uuid "f1aec492-a5e2-4532-8109-e29c921cecdf")
 	)
+	(label "REG_IN"
+		(at 242.57 31.75 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 0.508 0.508)
+			)
+			(justify right bottom)
+		)
+		(uuid "016574a0-5e74-411e-bda2-843c16cc6871")
+	)
 	(label "PWM3"
 		(at 128.27 160.02 0)
 		(fields_autoplaced yes)
@@ -8207,6 +8439,17 @@
 		)
 		(uuid "0db1754c-af40-4e34-a24e-3f2e41c24df5")
 	)
+	(label "MOT1_B"
+		(at 156.21 125.73 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 0.508 0.508)
+			)
+			(justify left bottom)
+		)
+		(uuid "16094e08-6425-44ca-b669-9901f54fa845")
+	)
 	(label "HSE_OUT"
 		(at 39.37 83.82 180)
 		(fields_autoplaced yes)
@@ -8229,6 +8472,17 @@
 		)
 		(uuid "237aa627-c7d5-46d5-a4e6-615ca88489bf")
 	)
+	(label "MOT1_A"
+		(at 156.21 123.19 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 0.508 0.508)
+			)
+			(justify left bottom)
+		)
+		(uuid "23b7a949-93f6-456c-93ad-c4b6db2f409e")
+	)
 	(label "ENC_A"
 		(at 58.42 87.63 0)
 		(fields_autoplaced yes)
@@ -8239,6 +8493,17 @@
 			(justify left bottom)
 		)
 		(uuid "313481a2-cf64-447d-9f1e-784e457e19c8")
+	)
+	(label "I2C_SCL"
+		(at 57.15 97.79 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "32bdf551-9701-4666-9330-8fe49c225253")
 	)
 	(label "PWM2"
 		(at 128.27 125.73 0)
@@ -8273,6 +8538,28 @@
 		)
 		(uuid "3f25bbe8-084f-4e47-9e72-b894db124541")
 	)
+	(label "IMU_AD0"
+		(at 220.98 85.09 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 0.508 0.508)
+			)
+			(justify left bottom)
+		)
+		(uuid "4b323553-8a68-433c-90a1-2fb29558042c")
+	)
+	(label "LMR2_SW"
+		(at 172.72 60.96 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 0.508 0.508)
+			)
+			(justify left bottom)
+		)
+		(uuid "4e7d14de-1394-4389-b524-afaf44041680")
+	)
 	(label "USB_D-"
 		(at 107.95 72.39 180)
 		(fields_autoplaced yes)
@@ -8284,6 +8571,28 @@
 		)
 		(uuid "558751f0-5f84-4626-a7e0-279574b81b0b")
 	)
+	(label "LMR1_FB"
+		(at 176.53 71.12 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 0.508 0.508)
+			)
+			(justify right bottom)
+		)
+		(uuid "5608bbcc-45c1-4a67-a725-9bee00843baa")
+	)
+	(label "IMU_REGOUT"
+		(at 265.43 95.25 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 0.508 0.508)
+			)
+			(justify left bottom)
+		)
+		(uuid "57bb0257-df24-4e66-a988-fdeee6b0f0c8")
+	)
 	(label "BOOT0"
 		(at 59.69 49.53 0)
 		(fields_autoplaced yes)
@@ -8294,6 +8603,17 @@
 			(justify left bottom)
 		)
 		(uuid "5d9d6e4a-300c-44cc-8db0-96ee3adc11a2")
+	)
+	(label "MOT2_SEN"
+		(at 156.21 167.64 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 0.508 0.508)
+			)
+			(justify left bottom)
+		)
+		(uuid "601f6089-d36b-4efa-aa42-80ef18472805")
 	)
 	(label "PWM1"
 		(at 128.27 123.19 0)
@@ -8328,6 +8648,17 @@
 		)
 		(uuid "644ce687-ed40-4519-bbaf-162e30ee373a")
 	)
+	(label "LMR1_FB"
+		(at 176.53 36.83 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 0.508 0.508)
+			)
+			(justify right bottom)
+		)
+		(uuid "6ca89f46-59cb-451a-ad23-3156e61b65ed")
+	)
 	(label "SWCLK"
 		(at 107.95 80.01 180)
 		(fields_autoplaced yes)
@@ -8339,6 +8670,28 @@
 		)
 		(uuid "6df7d74c-1e4a-45eb-8797-da83af6c4825")
 	)
+	(label "MOT1_SEN"
+		(at 156.21 130.81 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 0.508 0.508)
+			)
+			(justify left bottom)
+		)
+		(uuid "726e031f-c8d3-427c-906f-35d934feeb7f")
+	)
+	(label "PWM1"
+		(at 58.42 72.39 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "75eebac6-9916-42fe-bb0c-4a3536b4def1")
+	)
 	(label "USB_D+"
 		(at 107.95 74.93 180)
 		(fields_autoplaced yes)
@@ -8349,6 +8702,17 @@
 			(justify right bottom)
 		)
 		(uuid "7d738b3f-ebac-4f3c-96bf-e2f3c27fa4cc")
+	)
+	(label "PWM3"
+		(at 106.68 59.69 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "89ef1f85-a156-43ec-82f8-a16a13c3905f")
 	)
 	(label "ENC_B"
 		(at 58.42 90.17 0)
@@ -8362,17 +8726,6 @@
 		(uuid "8e0caa4b-e133-4a11-9ec7-29d4d9a8b9d6")
 	)
 	(label "PWM4"
-		(at 106.68 52.07 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "9418a4be-90cb-4d17-8056-2108508f734c")
-	)
-	(label "PWM4"
 		(at 128.27 162.56 0)
 		(fields_autoplaced yes)
 		(effects
@@ -8383,8 +8736,19 @@
 		)
 		(uuid "9548d614-79e8-4543-ac93-cea4e7ad2b71")
 	)
+	(label "IMU_CPOUT"
+		(at 267.97 92.71 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 0.508 0.508)
+			)
+			(justify left bottom)
+		)
+		(uuid "9e220474-b5e7-43d4-8875-167876d04ebd")
+	)
 	(label "I2C_SDA"
-		(at 57.15 95.25 0)
+		(at 57.15 100.33 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8392,18 +8756,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "995b9799-23d5-4b87-b142-94a853661ab0")
-	)
-	(label "PWM3"
-		(at 106.68 49.53 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "a2f672f6-ead2-4405-852f-d870376e6b9a")
+		(uuid "a6fef030-bf8f-4085-83b0-8879ac9e3e80")
 	)
 	(label "I2C_SCL"
 		(at 219.71 82.55 0)
@@ -8416,6 +8769,17 @@
 		)
 		(uuid "ae6e08c3-66de-43cb-bf98-1928b7c531e9")
 	)
+	(label "MOT2_A"
+		(at 156.21 160.02 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 0.508 0.508)
+			)
+			(justify left bottom)
+		)
+		(uuid "b0ae7d23-33f5-4207-be32-0b08dc84bfad")
+	)
 	(label "HSE_OUT"
 		(at 57.15 57.15 0)
 		(fields_autoplaced yes)
@@ -8426,6 +8790,17 @@
 			(justify left bottom)
 		)
 		(uuid "b79d1e38-93f6-4408-a2ae-ff72b04f0fe6")
+	)
+	(label "PWM4"
+		(at 106.68 62.23 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "bf061453-fc7f-4a9d-b196-4d8a53c4a856")
 	)
 	(label "HSE_IN"
 		(at 57.15 54.61 0)
@@ -8438,17 +8813,6 @@
 		)
 		(uuid "c0bb2994-c618-4c66-bc4c-ea48b87095d2")
 	)
-	(label "PWM2"
-		(at 106.68 46.99 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "c4fec2e1-4bde-4b9a-86d1-e6826a1b351f")
-	)
 	(label "HSE_IN"
 		(at 38.1 72.39 180)
 		(fields_autoplaced yes)
@@ -8460,16 +8824,27 @@
 		)
 		(uuid "c859427e-423b-4c47-a7ae-9a37b686b34c")
 	)
-	(label "I2C_SCL"
-		(at 57.15 92.71 0)
+	(label "LMR2_EN"
+		(at 153.67 73.66 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 1.27 1.27)
+				(size 0.508 0.508)
 			)
 			(justify left bottom)
 		)
-		(uuid "e5610ab5-bf7c-47fc-943c-eaa4cb43afc1")
+		(uuid "cf5708ea-2245-4e4c-bb32-4b400450351b")
+	)
+	(label "LMR1_SW"
+		(at 172.72 26.67 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 0.508 0.508)
+			)
+			(justify left bottom)
+		)
+		(uuid "e0c19637-d9b8-4edc-9d71-0cf11cecc172")
 	)
 	(label "SWDIO"
 		(at 107.95 77.47 180)
@@ -8493,103 +8868,38 @@
 		)
 		(uuid "e8fef3e7-7a2b-4d7d-94ab-5832ec99b391")
 	)
-	(label "PWM1"
-		(at 106.68 44.45 180)
+	(label "MOT2_B"
+		(at 156.21 162.56 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 0.508 0.508)
+			)
+			(justify left bottom)
+		)
+		(uuid "ecfbfc4e-0473-45ce-9028-0e4f179c573c")
+	)
+	(label "PWM2"
+		(at 58.42 74.93 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
-		(uuid "f582218d-8abc-452a-bf3f-001b07afd897")
+		(uuid "f2cdcff1-b9ca-4b29-b760-18cf88ad93bd")
 	)
-	(symbol
-		(lib_id "Device:R_Small")
-		(at 49.53 87.63 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "00d7dd30-283a-4bb7-ab73-772d30594ace")
-		(property "Reference" "R12"
-			(at 50.546 86.614 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
+	(label "LMR1_EN"
+		(at 153.67 39.37 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 0.508 0.508)
 			)
+			(justify left bottom)
 		)
-		(property "Value" "1.5k"
-			(at 50.546 89.154 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 49.53 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2206010130_UNI-ROYAL-Uniroyal-Elec-0603WAF1501T5E_C22843.pdf"
-			(at 49.53 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 49.53 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB" "C22843"
-			(at 49.53 87.63 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Link" "https://jlcpcb.com/partdetail/23570-0603WAF1501T5E/C22843"
-			(at 49.53 87.63 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "19e178c5-cafa-4f3d-9c70-19b2f90ba63f")
-		)
-		(pin "1"
-			(uuid "0127acc5-de87-4e09-95b8-935149762133")
-		)
-		(instances
-			(project "RobotBalanceador"
-				(path "/596bf329-52d0-445a-9356-7fc0844ee254"
-					(reference "R12")
-					(unit 1)
-				)
-			)
-		)
+		(uuid "f5ba2514-7936-4b20-94ec-6cac16ec910a")
 	)
 	(symbol
 		(lib_id "Diode:1N5819WS")
@@ -8810,6 +9120,91 @@
 		)
 	)
 	(symbol
+		(lib_id "Diode:1N5819WS")
+		(at 186.69 60.96 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "08655586-1672-45ed-b88d-d1058ce61186")
+		(property "Reference" "D3"
+			(at 186.69 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N5819WS"
+			(at 187.198 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-323"
+			(at 186.69 56.515 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2204281430_Guangdong-Hottech-1N5819WS_C191023.pdf"
+			(at 186.69 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "40V 600mV@1A 1A SOD-323 Schottky Barrier Diodes, SOD-323"
+			(at 186.69 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" "C191023"
+			(at 186.69 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://jlcpcb.com/partdetail/GuangdongHottech-1N5819WS/C191023"
+			(at 186.69 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "a1256e77-4702-4aa7-9764-71557d18c8fd")
+		)
+		(pin "1"
+			(uuid "f58727b3-7813-4c36-aab9-ae4488f1f1de")
+		)
+		(instances
+			(project "RobotBalanceador"
+				(path "/596bf329-52d0-445a-9356-7fc0844ee254"
+					(reference "D3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 246.38 106.68 0)
 		(unit 1)
@@ -9002,6 +9397,93 @@
 			(project "RobotBalanceador"
 				(path "/596bf329-52d0-445a-9356-7fc0844ee254"
 					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 49.53 92.71 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "117ba893-ab83-4b71-875b-3e7a41377f10")
+		(property "Reference" "R17"
+			(at 50.546 91.694 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "1.5k"
+			(at 50.546 94.234 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 49.53 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2206010130_UNI-ROYAL-Uniroyal-Elec-0603WAF1501T5E_C22843.pdf"
+			(at 49.53 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 49.53 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" "C22843"
+			(at 49.53 92.71 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://jlcpcb.com/partdetail/23570-0603WAF1501T5E/C22843"
+			(at 49.53 92.71 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "a5717026-3a20-450d-93fb-53eeb7fe6812")
+		)
+		(pin "1"
+			(uuid "b1bcad65-fc1d-44fa-a691-2a98d8befa0d")
+		)
+		(instances
+			(project "RobotBalanceador"
+				(path "/596bf329-52d0-445a-9356-7fc0844ee254"
+					(reference "R17")
 					(unit 1)
 				)
 			)
@@ -9312,7 +9794,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 158.75 167.64 90)
+		(at 166.37 167.64 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9320,7 +9802,7 @@
 		(dnp no)
 		(uuid "231a8b3c-8760-471b-bd7e-2d13c1e639f4")
 		(property "Reference" "R10"
-			(at 158.75 165.862 90)
+			(at 166.37 165.862 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9328,7 +9810,7 @@
 			)
 		)
 		(property "Value" "100m"
-			(at 158.75 169.672 90)
+			(at 166.37 169.672 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9336,7 +9818,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
-			(at 158.75 167.64 0)
+			(at 166.37 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9345,7 +9827,7 @@
 			)
 		)
 		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2205311900_UNI-ROYAL-Uniroyal-Elec-1206W4F100LT5E_C25334.pdf"
-			(at 158.75 167.64 0)
+			(at 166.37 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9354,7 +9836,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 158.75 167.64 0)
+			(at 166.37 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9363,7 +9845,7 @@
 			)
 		)
 		(property "JLCPCB" "C25334"
-			(at 158.75 167.64 90)
+			(at 166.37 167.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9372,7 +9854,7 @@
 			)
 		)
 		(property "Link" "https://jlcpcb.com/partdetail/26077-1206W4F100LT5E/C25334"
-			(at 158.75 167.64 90)
+			(at 166.37 167.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9677,6 +10159,91 @@
 			(project "RobotBalanceador"
 				(path "/596bf329-52d0-445a-9356-7fc0844ee254"
 					(reference "D5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:SS22")
+		(at 186.69 26.67 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "277697e8-1e80-49f9-b66b-e4281fa97d79")
+		(property "Reference" "D4"
+			(at 186.69 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SS22"
+			(at 186.69 29.464 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMA"
+			(at 186.69 22.225 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/88748/ss22.pdf"
+			(at 186.69 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "20V 2A Schottky Diode, SMA"
+			(at 186.69 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" "C7420361"
+			(at 186.69 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://jlcpcb.com/partdetail/Hongjiacheng-SS220/C7420361"
+			(at 186.69 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b9934774-058b-494f-9bb0-2a07985a63dc")
+		)
+		(pin "2"
+			(uuid "dd14e414-aea0-4e90-ab35-39b0d9ee69a8")
+		)
+		(instances
+			(project ""
+				(path "/596bf329-52d0-445a-9356-7fc0844ee254"
+					(reference "D4")
 					(unit 1)
 				)
 			)
@@ -10305,7 +10872,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 158.75 130.81 90)
+		(at 166.37 130.81 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10313,7 +10880,7 @@
 		(dnp no)
 		(uuid "35246094-63b3-4c0f-98bf-aeee7556fd7c")
 		(property "Reference" "R9"
-			(at 158.75 129.032 90)
+			(at 166.37 129.032 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10321,7 +10888,7 @@
 			)
 		)
 		(property "Value" "100m"
-			(at 158.75 132.842 90)
+			(at 166.37 132.842 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10329,7 +10896,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
-			(at 158.75 130.81 0)
+			(at 166.37 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10338,7 +10905,7 @@
 			)
 		)
 		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2205311900_UNI-ROYAL-Uniroyal-Elec-1206W4F100LT5E_C25334.pdf"
-			(at 158.75 130.81 0)
+			(at 166.37 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10347,7 +10914,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 158.75 130.81 0)
+			(at 166.37 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10356,7 +10923,7 @@
 			)
 		)
 		(property "JLCPCB" "C25334"
-			(at 158.75 130.81 90)
+			(at 166.37 130.81 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10365,7 +10932,7 @@
 			)
 		)
 		(property "Link" "https://jlcpcb.com/partdetail/26077-1206W4F100LT5E/C25334"
-			(at 158.75 130.81 90)
+			(at 166.37 130.81 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11017,91 +11584,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Diode:1N5819WS")
-		(at 186.69 26.67 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "50d81119-c0b9-487b-9746-71c58f218dac")
-		(property "Reference" "D3"
-			(at 186.69 24.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N5819WS"
-			(at 187.198 29.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_SOD-323"
-			(at 186.69 22.225 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2204281430_Guangdong-Hottech-1N5819WS_C191023.pdf"
-			(at 186.69 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "40V 600mV@1A 1A SOD-323 Schottky Barrier Diodes, SOD-323"
-			(at 186.69 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB" "C191023"
-			(at 186.69 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Link" "https://jlcpcb.com/partdetail/GuangdongHottech-1N5819WS/C191023"
-			(at 186.69 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "eeb8dab3-0e43-4368-9133-f1057fb316f0")
-		)
-		(pin "1"
-			(uuid "56b76c4f-764b-4a99-b202-e3c7c3f0dc3a")
-		)
-		(instances
-			(project "RobotBalanceador"
-				(path "/596bf329-52d0-445a-9356-7fc0844ee254"
-					(reference "D3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_Small")
 		(at 185.42 34.29 90)
 		(unit 1)
@@ -11734,7 +12216,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 227.33 88.9 180)
+		(at 219.71 88.9 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11742,7 +12224,7 @@
 		(dnp no)
 		(uuid "63ca123d-7d3c-41c0-9201-171d7a2af3bb")
 		(property "Reference" "R8"
-			(at 222.504 87.884 0)
+			(at 214.884 87.884 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11751,7 +12233,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 222.504 90.424 0)
+			(at 214.884 90.424 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11760,7 +12242,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 227.33 88.9 0)
+			(at 219.71 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11769,7 +12251,7 @@
 			)
 		)
 		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2206010045_UNI-ROYAL-Uniroyal-Elec-0603WAF1002T5E_C25804.pdf"
-			(at 227.33 88.9 0)
+			(at 219.71 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11778,7 +12260,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 227.33 88.9 0)
+			(at 219.71 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11787,7 +12269,7 @@
 			)
 		)
 		(property "JLCPCB" "C25804"
-			(at 227.33 88.9 90)
+			(at 219.71 88.9 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11796,7 +12278,7 @@
 			)
 		)
 		(property "Link" "https://jlcpcb.com/partdetail/26547-0603WAF1002T5E/C25804"
-			(at 227.33 88.9 90)
+			(at 219.71 88.9 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12322,7 +12804,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 163.83 170.18 0)
+		(at 171.45 170.18 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12330,7 +12812,7 @@
 		(dnp no)
 		(uuid "77e62082-d557-497c-8a9d-7600742b3ec4")
 		(property "Reference" "#PWR050"
-			(at 163.83 176.53 0)
+			(at 171.45 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12339,7 +12821,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 163.83 173.99 0)
+			(at 171.45 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12348,7 +12830,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 163.83 170.18 0)
+			(at 171.45 170.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12357,7 +12839,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 163.83 170.18 0)
+			(at 171.45 170.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12366,7 +12848,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 163.83 170.18 0)
+			(at 171.45 170.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12887,7 +13369,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Screw_Terminal_01x02")
-		(at 161.29 123.19 0)
+		(at 165.1 123.19 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12896,7 +13378,7 @@
 		(fields_autoplaced yes)
 		(uuid "89e42ecf-00f9-42e1-8bdd-0e650f066087")
 		(property "Reference" "J6"
-			(at 163.83 123.1899 0)
+			(at 167.64 123.1899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12905,7 +13387,7 @@
 			)
 		)
 		(property "Value" "MOT 1"
-			(at 163.83 125.7299 0)
+			(at 167.64 125.7299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12914,7 +13396,7 @@
 			)
 		)
 		(property "Footprint" "TerminalBlock:TerminalBlock_bornier-2_P5.08mm"
-			(at 161.29 123.19 0)
+			(at 165.1 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12923,7 +13405,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 161.29 123.19 0)
+			(at 165.1 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12932,7 +13414,7 @@
 			)
 		)
 		(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 161.29 123.19 0)
+			(at 165.1 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12941,7 +13423,7 @@
 			)
 		)
 		(property "JLCPCB" "C474906"
-			(at 161.29 123.19 0)
+			(at 165.1 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12950,7 +13432,7 @@
 			)
 		)
 		(property "Link" "https://jlcpcb.com/partdetail/Cixi_KefaElec-KF127_5_082P/C474906"
-			(at 161.29 123.19 0)
+			(at 165.1 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13935,7 +14417,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Crystal:Crystal_SMD_HC49-SD"
+		(property "Footprint" "Crystal:Crystal_SMD_5032-2Pin_5.0x3.2mm"
 			(at 30.48 77.47 0)
 			(effects
 				(font
@@ -13944,7 +14426,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2403291504_YXC-Crystal-Oscillators-X49SM8MSD2SC_C12674.pdf"
+		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2403291504_YXC-Crystal-Oscillators-X50328MSB2GI_C115962.pdf"
 			(at 30.48 77.47 0)
 			(effects
 				(font
@@ -13962,7 +14444,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" "C12674"
+		(property "JLCPCB" "C115962"
 			(at 30.48 77.47 90)
 			(effects
 				(font
@@ -13971,7 +14453,7 @@
 				(hide yes)
 			)
 		)
-		(property "Link" "https://jlcpcb.com/partdetail/Yxc_CrystalOscillators-X49SM8MSD2SC/C12674"
+		(property "Link" "https://jlcpcb.com/partdetail/Yxc_CrystalOscillators-X50328MSB2GI/C115962"
 			(at 30.48 77.47 90)
 			(effects
 				(font
@@ -14279,93 +14761,6 @@
 			(project "RobotBalanceador"
 				(path "/596bf329-52d0-445a-9356-7fc0844ee254"
 					(reference "#PWR032")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_Small")
-		(at 46.99 87.63 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "b7f7f3a3-5cee-42f7-ad75-78c9e6a9f9be")
-		(property "Reference" "R11"
-			(at 41.656 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "1.5k"
-			(at 41.656 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 46.99 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2206010130_UNI-ROYAL-Uniroyal-Elec-0603WAF1501T5E_C22843.pdf"
-			(at 46.99 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 46.99 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB" "C22843"
-			(at 46.99 87.63 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Link" "https://jlcpcb.com/partdetail/23570-0603WAF1501T5E/C22843"
-			(at 46.99 87.63 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "3d5bceba-8fe0-4d32-ab91-74b11f696465")
-		)
-		(pin "1"
-			(uuid "0af42cc6-747f-448a-bfc9-4164216142a0")
-		)
-		(instances
-			(project "RobotBalanceador"
-				(path "/596bf329-52d0-445a-9356-7fc0844ee254"
-					(reference "R11")
 					(unit 1)
 				)
 			)
@@ -14932,6 +15327,71 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3V3")
+		(at 48.26 87.63 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "cb21f02b-d5c0-4dc1-ad2d-db94131e77ce")
+		(property "Reference" "#PWR053"
+			(at 48.26 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 48.26 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 48.26 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 48.26 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 48.26 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "611a4a96-b5b9-4e84-ac0e-24a72f7e24cc")
+		)
+		(instances
+			(project "RobotBalanceador"
+				(path "/596bf329-52d0-445a-9356-7fc0844ee254"
+					(reference "#PWR053")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Polarized")
 		(at 124.46 148.59 0)
 		(unit 1)
@@ -15104,71 +15564,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3V3")
-		(at 48.26 82.55 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "d221a079-2b45-492b-9323-1bc2068a81e6")
-		(property "Reference" "#PWR08"
-			(at 48.26 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 48.26 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 48.26 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 48.26 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 48.26 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "1cbb6c40-5c12-4698-aaf5-c34ed6556665")
-		)
-		(instances
-			(project "RobotBalanceador"
-				(path "/596bf329-52d0-445a-9356-7fc0844ee254"
-					(reference "#PWR08")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 251.46 40.64 0)
 		(unit 1)
@@ -15323,7 +15718,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 163.83 133.35 0)
+		(at 171.45 133.35 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15331,7 +15726,7 @@
 		(dnp no)
 		(uuid "d52128c0-bc40-4a93-8ff0-6fd4a4025b86")
 		(property "Reference" "#PWR044"
-			(at 163.83 139.7 0)
+			(at 171.45 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15340,7 +15735,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 163.83 137.16 0)
+			(at 171.45 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15349,7 +15744,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 163.83 133.35 0)
+			(at 171.45 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15358,7 +15753,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 163.83 133.35 0)
+			(at 171.45 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15367,7 +15762,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 163.83 133.35 0)
+			(at 171.45 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16433,16 +16828,34 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 227.33 96.52 0)
+		(lib_id "Device:R_Small")
+		(at 46.99 92.71 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "e76f02d3-3319-4111-afb7-5ace164e782c")
-		(property "Reference" "#PWR037"
-			(at 227.33 102.87 0)
+		(uuid "e6e41bc9-2fcb-4b19-8d2a-8e4d39d30286")
+		(property "Reference" "R16"
+			(at 41.656 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "1.5k"
+			(at 41.656 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 46.99 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16450,26 +16863,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GND"
-			(at 227.33 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 227.33 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 227.33 96.52 0)
+		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2206010130_UNI-ROYAL-Uniroyal-Elec-0603WAF1501T5E_C22843.pdf"
+			(at 46.99 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16478,7 +16873,94 @@
 			)
 		)
 		(property "Description" ""
-			(at 227.33 96.52 0)
+			(at 46.99 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" "C22843"
+			(at 46.99 92.71 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://jlcpcb.com/partdetail/23570-0603WAF1501T5E/C22843"
+			(at 46.99 92.71 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "947a4c7f-0700-4175-ad69-cb1263ef3c1a")
+		)
+		(pin "1"
+			(uuid "42509af7-3b26-4fe1-9076-10c22d1e4ffb")
+		)
+		(instances
+			(project "RobotBalanceador"
+				(path "/596bf329-52d0-445a-9356-7fc0844ee254"
+					(reference "R16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 219.71 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e76f02d3-3319-4111-afb7-5ace164e782c")
+		(property "Reference" "#PWR037"
+			(at 219.71 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 219.71 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 219.71 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 219.71 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 219.71 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16901,91 +17383,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Diode:1N5819WS")
-		(at 186.69 60.96 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "f017d90e-4c37-4cd5-82cb-09d00d4b09f4")
-		(property "Reference" "D4"
-			(at 186.69 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N5819WS"
-			(at 187.198 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_SOD-323"
-			(at 186.69 56.515 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2204281430_Guangdong-Hottech-1N5819WS_C191023.pdf"
-			(at 186.69 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "40V 600mV@1A 1A SOD-323 Schottky Barrier Diodes, SOD-323"
-			(at 186.69 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB" "C191023"
-			(at 186.69 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Link" "https://jlcpcb.com/partdetail/GuangdongHottech-1N5819WS/C191023"
-			(at 186.69 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "167a5ca2-802e-4174-a256-da9bbfd9fad5")
-		)
-		(pin "1"
-			(uuid "b73b5af1-c495-4b6f-aa35-4c84c215e3dd")
-		)
-		(instances
-			(project "RobotBalanceador"
-				(path "/596bf329-52d0-445a-9356-7fc0844ee254"
-					(reference "D4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_Small")
 		(at 152.4 35.56 180)
 		(unit 1)
@@ -17301,7 +17698,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Screw_Terminal_01x02")
-		(at 161.29 160.02 0)
+		(at 165.1 160.02 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -17310,7 +17707,7 @@
 		(fields_autoplaced yes)
 		(uuid "fde567ab-f76a-4fc7-a70f-ee06e1107224")
 		(property "Reference" "J7"
-			(at 163.83 160.0199 0)
+			(at 167.64 160.0199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17319,7 +17716,7 @@
 			)
 		)
 		(property "Value" "MOT 2"
-			(at 163.83 162.5599 0)
+			(at 167.64 162.5599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17328,7 +17725,7 @@
 			)
 		)
 		(property "Footprint" "TerminalBlock:TerminalBlock_bornier-2_P5.08mm"
-			(at 161.29 160.02 0)
+			(at 165.1 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17337,7 +17734,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 161.29 160.02 0)
+			(at 165.1 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17346,7 +17743,7 @@
 			)
 		)
 		(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 161.29 160.02 0)
+			(at 165.1 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17355,7 +17752,7 @@
 			)
 		)
 		(property "JLCPCB" "C474906"
-			(at 161.29 160.02 0)
+			(at 165.1 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17364,7 +17761,7 @@
 			)
 		)
 		(property "Link" "https://jlcpcb.com/partdetail/Cixi_KefaElec-KF127_5_082P/C474906"
-			(at 161.29 160.02 0)
+			(at 165.1 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
