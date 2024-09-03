@@ -13652,7 +13652,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_USB:USB_Micro-B_Molex-105017-0001"
+		(property "Footprint" "Connector_USB:USB_Micro-B_Molex_47346-0001"
 			(at 228.6 137.16 0)
 			(effects
 				(font
@@ -13661,7 +13661,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2407041202_MOLEX-1050170001_C136000.pdf"
+		(property "Datasheet" "https://www.molex.com/en-us/products/part-detail/473460001?display=pdf"
 			(at 228.6 137.16 0)
 			(effects
 				(font
@@ -13679,7 +13679,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C136000"
+		(property "LCSC" "C132560"
 			(at 232.41 135.89 0)
 			(effects
 				(font
@@ -13688,7 +13688,7 @@
 				(hide yes)
 			)
 		)
-		(property "Link" "https://jlcpcb.com/partdetail/Molex-1050170001/C136000"
+		(property "Link" "https://jlcpcb.com/partdetail/Molex-473460001/C132560"
 			(at 232.41 135.89 0)
 			(effects
 				(font
