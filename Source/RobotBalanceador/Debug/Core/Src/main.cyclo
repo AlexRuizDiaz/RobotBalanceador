@@ -1,7 +1,7 @@
-../Core/Src/main.c:98:5:main	3
-../Core/Src/main.c:181:6:SystemClock_Config	4
-../Core/Src/main.c:226:6:AplicarPWM	3
-../Core/Src/main.c:255:6:AplicarPWM2	3
-../Core/Src/main.c:286:7:AccionPID	1
-../Core/Src/main.c:298:6:EnviarPC	1
-../Core/Src/main.c:311:6:Error_Handler	1
+../Core/Src/main.c:97:5:main	3
+../Core/Src/main.c:187:6:SystemClock_Config	4
+../Core/Src/main.c:232:6:PWM_Aplicar	3
+../Core/Src/main.c:261:6:PWM_Aplicar2	3
+../Core/Src/main.c:291:6:PID_Init	1
+../Core/Src/main.c:304:7:PID	3
+../Core/Src/main.c:325:6:Error_Handler	1

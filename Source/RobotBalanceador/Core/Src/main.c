@@ -18,7 +18,7 @@
 
 /* REFERENCIAS
  * HAL library for GY-521 (MPU6050) with Kalman filter: https://github.com/leech001/MPU6050
- *
+ * Digital PID Controllers - Dr. Varodom Toochinda
  *
  *
  */
@@ -44,10 +44,9 @@
 /* USER CODE BEGIN PTD */
 
 typedef struct {
- float kp;
- float ki;
- float kd;
- // Lo que sea necesario
+ float k1, k2, k3;
+ float e0, e1, e2;
+ float u_min, u_max, u;
 } PID_t;
 
 /* USER CODE END PTD */
@@ -79,10 +78,10 @@ PID_t pid;
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
 
-void AplicarPWM(float valor);
-void AplicarPWM2(float valor);
-float AccionPID(PID_t *pid, float setpoint, float nueva_lectura);
-void EnviarPC(float angulo);
+void PWM_Aplicar(float valor);
+void PWM_Aplicar2(float valor);
+void PID_Init(PID_t *pid, float kp, float ki, float kd, float u_min, float u_max);
+float PID(PID_t *pid, float setpoint, float nueva_lectura);
 
 /* USER CODE END PFP */
 
@@ -126,9 +125,8 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   // Inicializar variables
+  char msg[50];
   last_mpu_time = HAL_GetTick();
-
-
 
 
   // Inicialización del PWM
@@ -146,8 +144,13 @@ int main(void)
   HAL_TIM_Encoder_Start(&htim4, TIM_CHANNEL_ALL);
 
 
+  // Inicializar el PID
+  PID_Init(&pid, 40, 0, 0, -1000, 1000);
+
   // Esperar para la inicialización del MPU6050
   while (MPU6050_Init(&hi2c2) == 1);
+
+
 
   /* USER CODE END 2 */
 
@@ -160,9 +163,12 @@ int main(void)
       MPU6050_Read_All(&hi2c2, &MPU6050);
 
       float angulo = MPU6050.KalmanAngleY;
-      float accion = AccionPID(&pid, 0, angulo);
-      AplicarPWM(accion);
-      EnviarPC(angulo);
+      float accion = PID(&pid, 0, angulo);
+      PWM_Aplicar(accion);
+
+      // Enviar a la PC
+      snprintf(msg, 50, "accion=%f,angulo=%f\r\n", accion, angulo);
+      CDC_Transmit_FS((uint8_t *)msg, strlen(msg));
     }
 
 
@@ -223,7 +229,7 @@ void SystemClock_Config(void)
 /* USER CODE BEGIN 4 */
 
 // Aplicar PWM a los motores, si el valor es negativo va en el otro sentido
-void AplicarPWM(float valor) {
+void PWM_Aplicar(float valor) {
   // Duty va de 0 a 1000
 
   // Convertir valor a entero
@@ -252,7 +258,7 @@ void AplicarPWM(float valor) {
 }
 
 // Aplicar PWM a los motores utilizando el puente H DRV8870
-void AplicarPWM2(float valor) {
+void PWM_Aplicar2(float valor) {
   // Duty va de 0 a 1000
 
   // Convertir valor a entero
@@ -282,23 +288,31 @@ void AplicarPWM2(float valor) {
   }
 }
 
-// Cálculo de la acción del PID
-float AccionPID(PID_t *pid, float setpoint, float nueva_lectura) {
-  // Código ...
-
-
-
-
-
-  //return accion;
-  return 0.0;
+void PID_Init(PID_t *pid, float kp, float ki, float kd, float u_min, float u_max) {
+  pid->k1 = kp + ki + kd;
+  pid->k2 = -kp - 2*kd;
+  pid->k3 = kd;
+  pid->e1 = 0.0;
+  pid->e2 = 0.0;
+  pid->u_min = u_min;
+  pid->u_max = u_max;
+  pid->u = 0.0;
 }
 
-// Enviar a PC para visualizar en Serial Oscilloscope
-void EnviarPC(float angulo) {
-  char msg[30];
-  snprintf(msg, 30, "angulo=%f\r\n", angulo);
-  CDC_Transmit_FS((uint8_t *)msg, strlen(msg));
+
+// Cálculo de la acción del PID
+float PID(PID_t *pid, float setpoint, float nueva_lectura) {
+  pid->e2 = pid->e1;
+  pid->e1 = pid->e0;
+
+  pid->e0 = setpoint - nueva_lectura;
+  float delta_u = pid->k1*pid->e0 + pid->k2*pid->e1 + pid->k3*pid->e2;
+  pid->u = pid->u + delta_u;
+
+  if (pid->u > pid->u_max) pid->u = pid->u_max;
+  if (pid->u < pid->u_min) pid->u = pid->u_min;
+
+  return pid->u;
 }
 
 
